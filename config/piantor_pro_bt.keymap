@@ -159,7 +159,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_TO_NAV";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp LA(SPACE)>;
+            bindings = <&kp LCTRL>, <&mo 3>;
         };
 
         Nav_to_FLaunch: Nav_to_FLaunch {
