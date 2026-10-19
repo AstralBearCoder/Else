@@ -577,7 +577,7 @@
 
         ScreenShot {
             bindings = <&kp LG(LS(S))>;
-            key-positions = <36 37>;
+            key-positions = <2 3 4>;
             layers = <1 0 3 2 4 5>;
         };
 
@@ -614,7 +614,7 @@
             //                    | GUI |     | SPC   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LC(Z)  &kp LC(Y)  &kp RA(P)  &kp RA(Y)  &none  &uUGrv  &iICir  &eECir  &uUcir  &kp RA(O)  &trans  &kp LA(TAB)  &kp RA(Z)  &kp RA(N)  &oeOE  &eETrem  &kp RA(Q)  &kp RA(U)  &kp RA(COMMA)  &aAGrv  &eEGrv  &kp RA(E)  &trans  &kp LS(LC(TAB))  &kp Q  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)  &iITrem  &aACir  &oOCir  &kp RA(I)  &kp RA(A)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(Y)  &kp RA(P)  &kp RA(Y)  &none  &uUGrv  &iICir  &eECir  &uUcir  &kp RA(O)  &trans  &kp LA(TAB)  &kp RA(Z)  &kp RA(N)  &oeOE  &eETrem  &kp RA(Q)  &kp RA(U)  &kp RA(COMMA)  &aAGrv  &eEGrv  &kp RA(E)  &trans  &kp LS(LC(TAB))  &kp Q  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)  &iITrem  &aACir  &kp RA(I)  &oOCir  &kp RA(A)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
