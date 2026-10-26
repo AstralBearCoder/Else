@@ -247,8 +247,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp I>;
             label = "ICIR";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
 
         aCir: aCir {
@@ -274,8 +274,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp E>;
             label = "ECIR";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
 
         uCir: uCir {
@@ -283,8 +283,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp U>;
             label = "UCIR";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
 
         aGrv: aGrv {
