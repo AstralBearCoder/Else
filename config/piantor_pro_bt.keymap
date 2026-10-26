@@ -178,7 +178,7 @@
             bindings = <&kp Q &kp U>;
             label = "QU";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         Mqu: Mqu {
@@ -187,7 +187,7 @@
             bindings = <&kp LS(Q) &kp U>;
             label = "MQU";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         ApoSpc: Apo_Gui {
@@ -196,7 +196,7 @@
             bindings = <&kp APOS &kp SPACE>;
             label = "APO_GUI";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         GuiSpc: GuiSpc {
@@ -205,7 +205,7 @@
             bindings = <&kp DOUBLE_QUOTES &kp SPACE>;
             label = "GUISPC";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         oe: oe {
@@ -230,7 +230,7 @@
             bindings = <&kp LS(APOSTROPHE) &kp E>;
             label = "ETREM";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         iTrem: iTrem {
@@ -239,7 +239,7 @@
             bindings = <&kp LS(APOSTROPHE) &kp I>;
             label = "ITREM";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         iCir: iCir {
@@ -257,7 +257,7 @@
             bindings = <&kp CARET &kp A>;
             label = "ACIR";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         oCir: oCir {
@@ -266,7 +266,7 @@
             bindings = <&kp CARET &kp O>;
             label = "OCIR";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         eCir: eCir {
@@ -293,7 +293,7 @@
             bindings = <&kp GRAVE &kp A>;
             label = "AGRV";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         eGrv: eGrv {
@@ -302,7 +302,7 @@
             bindings = <&kp GRAVE &kp E>;
             label = "EGRV";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         uGrv: uGrv {
@@ -311,7 +311,7 @@
             bindings = <&kp GRAVE &kp U>;
             label = "UGRV";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
         };
 
         Double_Par: Double_Par {
@@ -344,24 +344,6 @@
             bindings = <&macro_tap>, <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
 
             label = "Double_Acc";
-            wait-ms = <0>;
-            tap-ms = <5>;
-        };
-
-        BH_CTm: BH_CTm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp T>;
-            label = "BH_CTM";
-            wait-ms = <0>;
-            tap-ms = <5>;
-        };
-
-        BH_BRm: BH_BRm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp B &kp R>;
-            label = "BH_BRM";
             wait-ms = <0>;
             tap-ms = <5>;
         };
