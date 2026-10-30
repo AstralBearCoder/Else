@@ -177,8 +177,8 @@
             #binding-cells = <0>;
             bindings = <&kp Q &kp U>;
             label = "QU";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
         Mqu: Mqu {
@@ -186,26 +186,40 @@
             #binding-cells = <0>;
             bindings = <&kp LS(Q) &kp U>;
             label = "MQU";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
+        // Apostrophe directe via Alt-Code 39 (anti-touche morte)
         ApoSpc: Apo_Gui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp APOS &kp SPACE>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_9>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
             label = "APO_GUI";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
+        // Guillemets directs via Alt-Code 34 (anti-touche morte)
         GuiSpc: GuiSpc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES &kp SPACE>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_4>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
             label = "GUISPC";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
         oe: oe {
@@ -220,8 +234,8 @@
                 <&kp LEFT_ALT>;
 
             label = "OE";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         eTrem: eTrem {
@@ -229,8 +243,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(APOSTROPHE) &kp E>;
             label = "ETREM";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         iTrem: iTrem {
@@ -238,8 +252,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(APOSTROPHE) &kp I>;
             label = "ITREM";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         iCir: iCir {
@@ -247,8 +261,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp I>;
             label = "ICIR";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         aCir: aCir {
@@ -256,8 +270,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp A>;
             label = "ACIR";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         oCir: oCir {
@@ -265,8 +279,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp O>;
             label = "OCIR";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         eCir: eCir {
@@ -274,8 +288,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp E>;
             label = "ECIR";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         uCir: uCir {
@@ -283,8 +297,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp U>;
             label = "UCIR";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         aGrv: aGrv {
@@ -292,8 +306,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp A>;
             label = "AGRV";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         eGrv: eGrv {
@@ -301,8 +315,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp E>;
             label = "EGRV";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         uGrv: uGrv {
@@ -310,8 +324,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp U>;
             label = "UGRV";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         Double_Par: Double_Par {
@@ -322,7 +336,7 @@
                 <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
 
             label = "Double_Par";
-            wait-ms = <0>;
+            wait-ms = <2>;
             tap-ms = <5>;
         };
 
@@ -334,7 +348,7 @@
                 <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
 
             label = "Double_Cro";
-            wait-ms = <0>;
+            wait-ms = <2>;
             tap-ms = <5>;
         };
 
@@ -344,7 +358,7 @@
             bindings = <&macro_tap>, <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
 
             label = "Double_Acc";
-            wait-ms = <0>;
+            wait-ms = <2>;
             tap-ms = <5>;
         };
 
@@ -354,7 +368,7 @@
             bindings = <&macro_tap>, <&kp RA(SLASH) &kp QUESTION &kp LEFT>;
 
             label = "DOUBLEINT";
-            wait-ms = <0>;
+            wait-ms = <2>;
             tap-ms = <5>;
         };
 
@@ -364,7 +378,7 @@
             bindings = <&macro_tap>, <&kp RA(N1) &kp EXCL &kp LEFT>;
 
             label = "DOUBLEEXC";
-            wait-ms = <0>;
+            wait-ms = <2>;
             tap-ms = <5>;
         };
 
@@ -380,8 +394,8 @@
                 <&kp LEFT_ALT>;
 
             label = "ENVIRON";
-            tap-ms = <10>;
-            wait-ms = <10>;
+            tap-ms = <5>;
+            wait-ms = <5>;
         };
 
         Fois: Fois {
@@ -396,8 +410,8 @@
                 <&kp LEFT_ALT>;
 
             label = "FOIS";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         Tir_Point: Tir_Point {
@@ -412,8 +426,8 @@
                 <&kp LEFT_ALT>;
 
             label = "TIR_POINT";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         FlecheDr: FlecheDr {
@@ -428,8 +442,8 @@
                 <&kp LEFT_ALT>;
 
             label = "FLECHEDR";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         cETrem: cETrem {
@@ -437,8 +451,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(APOSTROPHE) &kp LS(E)>;
             label = "cETrem";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cITrem: cITrem {
@@ -446,8 +460,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(APOSTROPHE) &kp LS(I)>;
             label = "cITrem";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cICir: cICir {
@@ -455,8 +469,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp LS(I)>;
             label = "cICir";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cACir: cACir {
@@ -464,8 +478,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp LS(A)>;
             label = "cACir";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cOCir: cOCir {
@@ -473,8 +487,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp LS(O)>;
             label = "cOCir";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cECir: cECir {
@@ -482,8 +496,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp LS(E)>;
             label = "cECir";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cUcir: cUcir {
@@ -491,8 +505,8 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp LS(U)>;
             label = "cUcir";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cAGrv: cAGrv {
@@ -500,8 +514,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp LS(A)>;
             label = "cAGrv";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cEGrv: cEGrv {
@@ -509,8 +523,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp LS(E)>;
             label = "cEGrv";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cUGrv: cUGrv {
@@ -518,8 +532,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp LS(U)>;
             label = "cUGrv";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <3>;
+            tap-ms = <3>;
         };
 
         cOE: cOE {
@@ -534,8 +548,8 @@
                 <&kp LEFT_ALT>;
 
             label = "cOE";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         ougrv: ougrv {
@@ -544,8 +558,8 @@
             bindings = <&macro_tap>, <&kp O &kp GRAVE &kp U &kp SPACE>;
 
             label = "OUGRV";
-            wait-ms = <0>;
-            tap-ms = <5>;
+            wait-ms = <2>;
+            tap-ms = <4>;
         };
     };
 
@@ -580,70 +594,71 @@
 
         Layer0_Base {
             display-name = "0_Rosellae";
-
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC | ENT | RSE  | ALT |
-
             bindings = <
-&kp ESCAPE  &kp B  &kp L  &kp D  &kp C  &kp V  &kp Z  &ApoGui  &kp O  &kp U  &kp X  &kp BSPC  &kp TAB  &kp N  &kp R  &kp T  &kp S  &kp F  &kp Y  &kp H  &kp E  &kp I  &kp A  &kp ENTER  &kp LEFT_WIN  &qu  &kp J  &kp M  &kp G  &kp W  &kp K  &kp P  &Virg_Inter  &Point_Excl  &Colon_Scl  &kp LC(LSHIFT)  &sk LEFT_SHIFT  &sl 1  &Ctrl_to_Nav  &Nav_to_FLaunch  &kp SPACE  &Altgralt
+&kp ESCAPE    &kp B  &kp L  &kp D  &kp C  &kp V  &kp Z  &ApoGui  &kp O        &kp U        &kp X       &kp BSPC
+&kp TAB       &kp N  &kp R  &kp T  &kp S  &kp F  &kp Y  &kp H    &kp E        &kp I        &kp A       &kp ENTER
+&kp LEFT_WIN  &qu    &kp J  &kp M  &kp G  &kp W  &kp K  &kp P    &Virg_Inter  &Point_Excl  &Colon_Scl  &kp LC(LSHIFT)
+                     &sk LEFT_SHIFT  &sl 1  &Ctrl_to_Nav  &Nav_to_FLaunch  &kp SPACE  &Altgralt
             >;
         };
 
         Layer1_Accents {
             display-name = "1_Rosellae";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5    |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCR| RGB | RST | BOOT| Unlock|     |     |     |     |     |      |
-            //                    | GUI |     | SPC   | ENT |     | ALT |
-
             bindings = <
-&trans  &kp LC(Z)  &kp LC(Y)  &kp RA(P)  &kp RA(Y)  &none  &uUGrv  &iICir  &eECir  &uUcir  &kp RA(O)  &trans  &kp LA(TAB)  &kp RA(Z)  &kp RA(N)  &oeOE  &eETrem  &kp RA(Q)  &kp RA(U)  &kp RA(COMMA)  &aAGrv  &eEGrv  &kp RA(E)  &trans  &kp LS(LC(TAB))  &kp Q  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)  &iITrem  &aACir  &kp RA(I)  &oOCir  &kp RA(A)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &kp LC(Z)  &kp LC(Y)  &kp RA(P)  &kp RA(Y)  &none      &uUGrv   &iICir         &eECir     &uUcir   &kp RA(O)  &trans
+&kp LA(TAB)      &kp RA(Z)  &kp RA(N)  &oeOE      &eETrem    &kp RA(Q)  &kp RA(U)&kp RA(COMMA)  &aAGrv     &eEGrv   &kp RA(E)  &trans
+&kp LS(LC(TAB))  &kp Q      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)  &iITrem  &aACir         &kp RA(I)  &oOCir   &kp RA(A)  &trans
+                            &trans     &trans     &trans     &trans     &trans   &trans
             >;
         };
 
         Layer2_Symbol {
             display-name = "2_Rosellae";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL | HUD | HUI |     |     |     |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC | ENT |     | ALT |
-
             bindings = <
-&trans  &kp RA(N5)  &kp DOLLAR  &Double_Cro  &kp CARET  &kp TILDE  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp AMPERSAND  &kp NON_US_BACKSLASH  &kp DELETE  &trans  &kp PLUS  &kp EQUAL  &Double_Par  &kp ASTERISK  &FlecheDr  &kp HASH  &kp UNDERSCORE  &kp MINUS  &kp AT_SIGN  &kp SLASH  &trans  &trans  &Mqu  &Fois  &Double_Acc  &kp GRAVE  &none  &none  &kp PERCENT  &DoubleInt  &DoubleExc  &kp PIPE  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RA(N5)  &kp DOLLAR   &Double_Cro  &kp CARET     &kp TILDE   &none      &kp LESS_THAN   &kp GREATER_THAN  &kp AMPERSAND  &kp NON_US_BACKSLASH  &kp DELETE
+&trans  &kp PLUS    &kp EQUAL    &Double_Par  &kp ASTERISK  &FlecheDr   &kp HASH   &kp UNDERSCORE  &kp MINUS         &kp AT_SIGN    &kp SLASH             &trans
+&trans  &Mqu        &Fois        &Double_Acc  &kp GRAVE     &none       &none      &kp PERCENT     &DoubleInt        &DoubleExc     &kp PIPE              &trans
+                    &trans       &trans       &trans        &trans      &trans     &trans
             >;
         };
 
         Layer3_Nav {
             display-name = "3_Rosellae";
             bindings = <
-&trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp END  &kp PAGE_DOWN  &kp PG_UP  &kp HOME  &kp F2  &kp F4  &kp F11  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp MINUS  &kp SLASH  &kp COMMA  &kp N4  &kp N5  &kp N6  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp N0  &kp PLUS  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp END     &kp PAGE_DOWN  &kp PG_UP   &kp HOME   &kp F2  &kp F4  &kp F11     &trans
+&trans  &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT   &kp MINUS      &kp SLASH   &kp COMMA  &kp N4  &kp N5  &kp N6      &trans
+&trans  &kp N1      &kp N2            &kp N3      &kp N0      &kp PLUS       &kp EQUAL   &kp N7     &kp N8  &kp N9  &kp PERIOD  &trans
+                    &trans            &trans      &trans      &trans         &trans      &trans
             >;
         };
 
         Layer4_Gaming {
             display-name = "4_Rosellae";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp R  &kp UP_ARROW  &kp SPACE  &kp SPACE  &kp UP_ARROW  &kp R
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans        &trans
+                &kp R   &kp UP  &kp SPACE       &kp SPACE       &kp UP     &kp R
             >;
         };
 
         Layer5_Arabic {
             display-name = "5_Rosellae";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         Bootloader {
+            display-name = "Bootloader";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_NXT  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &bt BT_CLR      &bt BT_CLR_ALL  &bt BT_NXT      &trans  &trans  &trans
             >;
         };
     };
