@@ -197,6 +197,52 @@
             bindings = <&macro_tap>, <&kp LS(APOSTROPHE) &kp SPACE>;
         };
 
+        /* Macros ' + Voyelle pour éviter la transformation en accent aigu */
+        apo_a: apo_a {
+            compatible = "zmk,behavior-macro";
+            label = "APO_A";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp APOSTROPHE &kp SPACE &kp A>;
+        };
+
+        apo_e: apo_e {
+            compatible = "zmk,behavior-macro";
+            label = "APO_E";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp APOSTROPHE &kp SPACE &kp E>;
+        };
+
+        apo_i: apo_i {
+            compatible = "zmk,behavior-macro";
+            label = "APO_I";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp APOSTROPHE &kp SPACE &kp I>;
+        };
+
+        apo_o: apo_o {
+            compatible = "zmk,behavior-macro";
+            label = "APO_O";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp APOSTROPHE &kp SPACE &kp O>;
+        };
+
+        apo_u: apo_u {
+            compatible = "zmk,behavior-macro";
+            label = "APO_U";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp APOSTROPHE &kp SPACE &kp U>;
+        };
+
         /* Alt-code macros (host NumLock must be ON). Alt is held for ~10-20 ms. */
         oe: oe {
             compatible = "zmk,behavior-macro";
@@ -550,6 +596,36 @@
         ActBoot {
             bindings = <&tog 6>;
             key-positions = <13 14 15 16 17>;
+        };
+
+        combo_apo_a {
+            bindings = <&apo_a>;
+            key-positions = <7 22>;
+            layers = <0>;
+        };
+
+        combo_apo_e {
+            bindings = <&apo_e>;
+            key-positions = <7 20>;
+            layers = <0>;
+        };
+
+        combo_apo_i {
+            bindings = <&apo_i>;
+            key-positions = <7 21>;
+            layers = <0>;
+        };
+
+        combo_apo_o {
+            bindings = <&apo_o>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        combo_apo_u {
+            bindings = <&apo_u>;
+            key-positions = <7 9>;
+            layers = <0>;
         };
     };
 
