@@ -9,7 +9,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    chosen { zmk,physical-layout = &default_layout; };
+    chosen {
+        zmk,physical-layout = &default_layout;
+    };
 };
 
 / {
@@ -17,135 +19,120 @@
         Virg_Inter: Virg_Inter {
             compatible = "zmk,behavior-mod-morph";
             label = "VIRG_INTER";
-            bindings = <&kp COMMA>, <&kp QUESTION>;
-
             #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QUESTION>;
             mods = <(MOD_LSFT)>;
         };
 
         Point_Excl: Point_Excl {
             compatible = "zmk,behavior-mod-morph";
             label = "POINT_EXCL";
-            bindings = <&kp PERIOD>, <&kp EXCL>;
-
             #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp EXCL>;
             mods = <(MOD_LSFT)>;
         };
 
         Colon_Scl: Colon_Scl {
             compatible = "zmk,behavior-mod-morph";
             label = "COLON_SCL";
-            bindings = <&kp COLON>, <&kp SEMICOLON>;
-
             #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT)>;
         };
 
         ApoGui: ApoGui {
             compatible = "zmk,behavior-mod-morph";
             label = "APOGUI";
-            bindings = <&ApoSpc>, <&GuiSpc>;
-
             #binding-cells = <0>;
+            bindings = <&ApoSpc>, <&GuiSpc>;
             mods = <(MOD_LSFT)>;
         };
 
         eETrem: eETrem {
             compatible = "zmk,behavior-mod-morph";
             label = "EETREM";
-            bindings = <&eTrem>, <&cETrem>;
-
             #binding-cells = <0>;
+            bindings = <&eTrem>, <&cETrem>;
             mods = <(MOD_LSFT)>;
         };
 
         iITrem: iITrem {
             compatible = "zmk,behavior-mod-morph";
             label = "IITREM";
-            bindings = <&iTrem>, <&cITrem>;
-
             #binding-cells = <0>;
+            bindings = <&iTrem>, <&cITrem>;
             mods = <(MOD_LSFT)>;
         };
 
         iICir: iICir {
             compatible = "zmk,behavior-mod-morph";
             label = "IICIR";
-            bindings = <&iCir>, <&cICir>;
-
             #binding-cells = <0>;
+            bindings = <&iCir>, <&cICir>;
             mods = <(MOD_LSFT)>;
         };
 
         aACir: aACir {
             compatible = "zmk,behavior-mod-morph";
             label = "AACIR";
-            bindings = <&aCir>, <&cACir>;
-
             #binding-cells = <0>;
+            bindings = <&aCir>, <&cACir>;
             mods = <(MOD_LSFT)>;
         };
 
         oOCir: oOCir {
             compatible = "zmk,behavior-mod-morph";
             label = "OOCIR";
-            bindings = <&oCir>, <&cOCir>;
-
             #binding-cells = <0>;
+            bindings = <&oCir>, <&cOCir>;
             mods = <(MOD_LSFT)>;
         };
 
         eECir: eECir {
             compatible = "zmk,behavior-mod-morph";
             label = "EECIR";
-            bindings = <&eCir>, <&cECir>;
-
             #binding-cells = <0>;
+            bindings = <&eCir>, <&cECir>;
             mods = <(MOD_LSFT)>;
         };
 
         uUcir: uUcir {
             compatible = "zmk,behavior-mod-morph";
             label = "UUCIR";
-            bindings = <&uCir>, <&cUcir>;
-
             #binding-cells = <0>;
+            bindings = <&uCir>, <&cUcir>;
             mods = <(MOD_LSFT)>;
         };
 
         aAGrv: aAGrv {
             compatible = "zmk,behavior-mod-morph";
             label = "AAGRV";
-            bindings = <&aGrv>, <&cAGrv>;
-
             #binding-cells = <0>;
+            bindings = <&aGrv>, <&cAGrv>;
             mods = <(MOD_LSFT)>;
         };
 
         eEGrv: eEGrv {
             compatible = "zmk,behavior-mod-morph";
             label = "EEGRV";
-            bindings = <&eGrv>, <&cEGrv>;
-
             #binding-cells = <0>;
+            bindings = <&eGrv>, <&cEGrv>;
             mods = <(MOD_LSFT)>;
         };
 
         uUGrv: uUGrv {
             compatible = "zmk,behavior-mod-morph";
             label = "UUGRV";
-            bindings = <&uGrv>, <&cUGrv>;
-
             #binding-cells = <0>;
+            bindings = <&uGrv>, <&cUGrv>;
             mods = <(MOD_LSFT)>;
         };
 
         oeOE: oeOE {
             compatible = "zmk,behavior-mod-morph";
             label = "OEOE";
-            bindings = <&oe>, <&cOE>;
-
             #binding-cells = <0>;
+            bindings = <&oe>, <&cOE>;
             mods = <(MOD_LSFT)>;
         };
 
@@ -174,57 +161,49 @@
     macros {
         qu: qu {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Q &kp U>;
             label = "QU";
-            wait-ms = <2>;
-            tap-ms = <2>;
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp Q &kp U>;
         };
 
         Mqu: Mqu {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(Q) &kp U>;
             label = "MQU";
-            wait-ms = <2>;
-            tap-ms = <2>;
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(Q) &kp U>;
         };
 
-        // Apostrophe directe via Alt-Code 39 (anti-touche morte)
+        /* Literal ' : dead acute + SPACE. No held modifier. Requires host US-International. */
         ApoSpc: Apo_Gui {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_3 &kp KP_NUMBER_9>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
             label = "APO_GUI";
-            wait-ms = <2>;
-            tap-ms = <2>;
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp APOSTROPHE &kp SPACE>;
         };
 
-        // Guillemets directs via Alt-Code 34 (anti-touche morte)
+        /* Literal " : dead diaeresis + SPACE. */
         GuiSpc: GuiSpc {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_3 &kp KP_NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
             label = "GUISPC";
-            wait-ms = <2>;
-            tap-ms = <2>;
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp LS(APOSTROPHE) &kp SPACE>;
         };
 
+        /* Alt-code macros (host NumLock must be ON). Alt is held for ~10-20 ms. */
         oe: oe {
             compatible = "zmk,behavior-macro";
+            label = "OE";
             #binding-cells = <0>;
+            wait-ms = <2>;
+            tap-ms = <2>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -232,313 +211,14 @@
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_6>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
-
-            label = "OE";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
-        eTrem: eTrem {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(APOSTROPHE) &kp E>;
-            label = "ETREM";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        iTrem: iTrem {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(APOSTROPHE) &kp I>;
-            label = "ITREM";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        iCir: iCir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp I>;
-            label = "ICIR";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        aCir: aCir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp A>;
-            label = "ACIR";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        oCir: oCir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp O>;
-            label = "OCIR";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        eCir: eCir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp E>;
-            label = "ECIR";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        uCir: uCir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp U>;
-            label = "UCIR";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        aGrv: aGrv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp A>;
-            label = "AGRV";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        eGrv: eGrv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp E>;
-            label = "EGRV";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        uGrv: uGrv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp U>;
-            label = "UGRV";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        Double_Par: Double_Par {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
-
-            label = "Double_Par";
-            wait-ms = <2>;
-            tap-ms = <5>;
-        };
-
-        Double_Cro: Double_Cro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
-
-            label = "Double_Cro";
-            wait-ms = <2>;
-            tap-ms = <5>;
-        };
-
-        Double_Acc: Double_Acc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
-
-            label = "Double_Acc";
-            wait-ms = <2>;
-            tap-ms = <5>;
-        };
-
-        DoubleInt: DoubleInt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp RA(SLASH) &kp QUESTION &kp LEFT>;
-
-            label = "DOUBLEINT";
-            wait-ms = <2>;
-            tap-ms = <5>;
-        };
-
-        DoubleExc: DoubleExc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp RA(N1) &kp EXCL &kp LEFT>;
-
-            label = "DOUBLEEXC";
-            wait-ms = <2>;
-            tap-ms = <5>;
-        };
-
-        Environ: Environ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_7>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ENVIRON";
-            tap-ms = <5>;
-            wait-ms = <5>;
-        };
-
-        Fois: Fois {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_5>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "FOIS";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
-        Tir_Point: Tir_Point {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_9>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "TIR_POINT";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
-        FlecheDr: FlecheDr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_2 &kp KP_NUMBER_6>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "FLECHEDR";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
-        cETrem: cETrem {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(APOSTROPHE) &kp LS(E)>;
-            label = "cETrem";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cITrem: cITrem {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(APOSTROPHE) &kp LS(I)>;
-            label = "cITrem";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cICir: cICir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(I)>;
-            label = "cICir";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cACir: cACir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(A)>;
-            label = "cACir";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cOCir: cOCir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(O)>;
-            label = "cOCir";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cECir: cECir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(E)>;
-            label = "cECir";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cUcir: cUcir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(U)>;
-            label = "cUcir";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cAGrv: cAGrv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp LS(A)>;
-            label = "cAGrv";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cEGrv: cEGrv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp LS(E)>;
-            label = "cEGrv";
-            wait-ms = <3>;
-            tap-ms = <3>;
-        };
-
-        cUGrv: cUGrv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp LS(U)>;
-            label = "cUGrv";
-            wait-ms = <3>;
-            tap-ms = <3>;
         };
 
         cOE: cOE {
             compatible = "zmk,behavior-macro";
+            label = "cOE";
             #binding-cells = <0>;
+            wait-ms = <2>;
+            tap-ms = <2>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -546,20 +226,304 @@
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_0>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
-
-            label = "cOE";
-            wait-ms = <5>;
-            tap-ms = <5>;
         };
 
+        Environ: Environ {
+            compatible = "zmk,behavior-macro";
+            label = "ENVIRON";
+            #binding-cells = <0>;
+            wait-ms = <2>;
+            tap-ms = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
+
+        Fois: Fois {
+            compatible = "zmk,behavior-macro";
+            label = "FOIS";
+            #binding-cells = <0>;
+            wait-ms = <2>;
+            tap-ms = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
+
+        Tir_Point: Tir_Point {
+            compatible = "zmk,behavior-macro";
+            label = "TIR_POINT";
+            #binding-cells = <0>;
+            wait-ms = <2>;
+            tap-ms = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_9>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
+
+        FlecheDr: FlecheDr {
+            compatible = "zmk,behavior-macro";
+            label = "FLECHEDR";
+            #binding-cells = <0>;
+            wait-ms = <2>;
+            tap-ms = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
+
+        /* Dead-key accents, lowercase */
+        eTrem: eTrem {
+            compatible = "zmk,behavior-macro";
+            label = "ETREM";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(APOSTROPHE) &kp E>;
+        };
+
+        iTrem: iTrem {
+            compatible = "zmk,behavior-macro";
+            label = "ITREM";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(APOSTROPHE) &kp I>;
+        };
+
+        iCir: iCir {
+            compatible = "zmk,behavior-macro";
+            label = "ICIR";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp I>;
+        };
+
+        aCir: aCir {
+            compatible = "zmk,behavior-macro";
+            label = "ACIR";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp A>;
+        };
+
+        oCir: oCir {
+            compatible = "zmk,behavior-macro";
+            label = "OCIR";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp O>;
+        };
+
+        eCir: eCir {
+            compatible = "zmk,behavior-macro";
+            label = "ECIR";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp E>;
+        };
+
+        uCir: uCir {
+            compatible = "zmk,behavior-macro";
+            label = "UCIR";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp U>;
+        };
+
+        aGrv: aGrv {
+            compatible = "zmk,behavior-macro";
+            label = "AGRV";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp GRAVE &kp A>;
+        };
+
+        eGrv: eGrv {
+            compatible = "zmk,behavior-macro";
+            label = "EGRV";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp GRAVE &kp E>;
+        };
+
+        uGrv: uGrv {
+            compatible = "zmk,behavior-macro";
+            label = "UGRV";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp GRAVE &kp U>;
+        };
+
+        /* Dead-key accents, uppercase */
+        cETrem: cETrem {
+            compatible = "zmk,behavior-macro";
+            label = "cETrem";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(APOSTROPHE) &kp LS(E)>;
+        };
+
+        cITrem: cITrem {
+            compatible = "zmk,behavior-macro";
+            label = "cITrem";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(APOSTROPHE) &kp LS(I)>;
+        };
+
+        cICir: cICir {
+            compatible = "zmk,behavior-macro";
+            label = "cICir";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp LS(I)>;
+        };
+
+        cACir: cACir {
+            compatible = "zmk,behavior-macro";
+            label = "cACir";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp LS(A)>;
+        };
+
+        cOCir: cOCir {
+            compatible = "zmk,behavior-macro";
+            label = "cOCir";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp LS(O)>;
+        };
+
+        cECir: cECir {
+            compatible = "zmk,behavior-macro";
+            label = "cECir";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp LS(E)>;
+        };
+
+        cUcir: cUcir {
+            compatible = "zmk,behavior-macro";
+            label = "cUcir";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp CARET &kp LS(U)>;
+        };
+
+        cAGrv: cAGrv {
+            compatible = "zmk,behavior-macro";
+            label = "cAGrv";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp GRAVE &kp LS(A)>;
+        };
+
+        cEGrv: cEGrv {
+            compatible = "zmk,behavior-macro";
+            label = "cEGrv";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp GRAVE &kp LS(E)>;
+        };
+
+        cUGrv: cUGrv {
+            compatible = "zmk,behavior-macro";
+            label = "cUGrv";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp GRAVE &kp LS(U)>;
+        };
+
+        /* Paired delimiters: type pair, step cursor back inside */
+        Double_Par: Double_Par {
+            compatible = "zmk,behavior-macro";
+            label = "Double_Par";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+        };
+
+        Double_Cro: Double_Cro {
+            compatible = "zmk,behavior-macro";
+            label = "Double_Cro";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+        };
+
+        Double_Acc: Double_Acc {
+            compatible = "zmk,behavior-macro";
+            label = "Double_Acc";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+        };
+
+        DoubleInt: DoubleInt {
+            compatible = "zmk,behavior-macro";
+            label = "DOUBLEINT";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp RA(SLASH) &kp QUESTION &kp LEFT>;
+        };
+
+        DoubleExc: DoubleExc {
+            compatible = "zmk,behavior-macro";
+            label = "DOUBLEEXC";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp RA(N1) &kp EXCL &kp LEFT>;
+        };
+
+        /* "où " : O + dead grave + U + SPACE */
         ougrv: ougrv {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp O &kp GRAVE &kp U &kp SPACE>;
-
             label = "OUGRV";
-            wait-ms = <2>;
-            tap-ms = <4>;
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&macro_tap>, <&kp O &kp GRAVE &kp U &kp SPACE>;
         };
     };
 
@@ -595,50 +559,50 @@
         Layer0_Base {
             display-name = "0_Rosellae";
             bindings = <
-&kp ESCAPE    &kp B  &kp L  &kp D  &kp C  &kp V  &kp Z  &ApoGui  &kp O        &kp U        &kp X       &kp BSPC
-&kp TAB       &kp N  &kp R  &kp T  &kp S  &kp F  &kp Y  &kp H    &kp E        &kp I        &kp A       &kp ENTER
-&kp LEFT_WIN  &qu    &kp J  &kp M  &kp G  &kp W  &kp K  &kp P    &Virg_Inter  &Point_Excl  &Colon_Scl  &kp LC(LSHIFT)
-                     &sk LEFT_SHIFT  &sl 1  &Ctrl_to_Nav  &Nav_to_FLaunch  &kp SPACE  &Altgralt
+&kp ESCAPE      &kp B   &kp L         &kp D             &kp C       &kp V   &kp Z  &ApoGui  &kp O        &kp U          &kp X        &kp BSPC
+&kp TAB         &kp N   &kp R         &kp T             &kp S       &kp F   &kp Y  &kp H    &kp E        &kp I          &kp A        &kp ENTER
+&kp LEFT_WIN    &qu     &kp J         &kp M             &kp G       &kp W   &kp K  &kp P    &Virg_Inter  &Point_Excl    &Colon_Scl   &kp LC(LSHIFT)
+&sk LEFT_SHIFT  &sl 1   &Ctrl_to_Nav  &Nav_to_FLaunch   &kp SPACE   &Altgralt
             >;
         };
 
         Layer1_Accents {
             display-name = "1_Rosellae";
             bindings = <
-&trans           &kp LC(Z)  &kp LC(Y)  &kp RA(P)  &kp RA(Y)  &none      &uUGrv   &iICir         &eECir     &uUcir   &kp RA(O)  &trans
-&kp LA(TAB)      &kp RA(Z)  &kp RA(N)  &oeOE      &eETrem    &kp RA(Q)  &kp RA(U)&kp RA(COMMA)  &aAGrv     &eEGrv   &kp RA(E)  &trans
-&kp LS(LC(TAB))  &kp Q      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)  &iITrem  &aACir         &kp RA(I)  &oOCir   &kp RA(A)  &trans
-                            &trans     &trans     &trans     &trans     &trans   &trans
+&trans            &kp LC(Z)  &kp LC(Y)  &kp RA(P)  &kp RA(Y)  &none       &uUGrv    &iICir    &eECir        &uUcir    &kp RA(O)  &trans
+&kp LA(TAB)       &kp RA(Z)  &kp RA(N)  &oeOE      &eETrem    &kp RA(Q)   &kp RA(U) &kp RA(COMMA) &aAGrv    &eEGrv    &kp RA(E)  &trans
+&kp LS(LC(TAB))   &kp Q      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)   &iITrem   &aACir    &kp RA(I)     &oOCir    &kp RA(A)  &trans
+&trans            &trans     &trans     &trans     &trans     &trans
             >;
         };
 
         Layer2_Symbol {
             display-name = "2_Rosellae";
             bindings = <
-&trans  &kp RA(N5)  &kp DOLLAR   &Double_Cro  &kp CARET     &kp TILDE   &none      &kp LESS_THAN   &kp GREATER_THAN  &kp AMPERSAND  &kp NON_US_BACKSLASH  &kp DELETE
-&trans  &kp PLUS    &kp EQUAL    &Double_Par  &kp ASTERISK  &FlecheDr   &kp HASH   &kp UNDERSCORE  &kp MINUS         &kp AT_SIGN    &kp SLASH             &trans
-&trans  &Mqu        &Fois        &Double_Acc  &kp GRAVE     &none       &none      &kp PERCENT     &DoubleInt        &DoubleExc     &kp PIPE              &trans
-                    &trans       &trans       &trans        &trans      &trans     &trans
+&trans  &kp RA(N5)  &kp DOLLAR  &Double_Cro  &kp CARET     &kp TILDE  &none   &kp LESS_THAN  &kp GREATER_THAN  &kp AMPERSAND  &kp NON_US_BACKSLASH  &kp DELETE
+&trans  &kp PLUS    &kp EQUAL   &Double_Par  &kp ASTERISK  &FlecheDr  &kp HASH &kp UNDERSCORE &kp MINUS        &kp AT_SIGN    &kp SLASH             &trans
+&trans  &Mqu        &Fois       &Double_Acc  &kp GRAVE     &none      &none   &kp PERCENT    &DoubleInt        &DoubleExc     &kp PIPE              &trans
+&trans  &trans      &trans      &trans       &trans        &trans
             >;
         };
 
         Layer3_Nav {
             display-name = "3_Rosellae";
             bindings = <
-&trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp END     &kp PAGE_DOWN  &kp PG_UP   &kp HOME   &kp F2  &kp F4  &kp F11     &trans
-&trans  &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT   &kp MINUS      &kp SLASH   &kp COMMA  &kp N4  &kp N5  &kp N6      &trans
-&trans  &kp N1      &kp N2            &kp N3      &kp N0      &kp PLUS       &kp EQUAL   &kp N7     &kp N8  &kp N9  &kp PERIOD  &trans
-                    &trans            &trans      &trans      &trans         &trans      &trans
+&trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp END    &kp PAGE_DOWN  &kp PG_UP  &kp HOME   &kp F2   &kp F4   &kp F11     &trans
+&trans  &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT  &kp MINUS      &kp SLASH  &kp COMMA  &kp N4   &kp N5   &kp N6      &trans
+&trans  &kp N1      &kp N2            &kp N3      &kp N0     &kp PLUS       &kp EQUAL  &kp N7     &kp N8   &kp N9   &kp PERIOD  &trans
+&trans  &trans      &trans            &trans      &trans     &trans
             >;
         };
 
         Layer4_Gaming {
             display-name = "4_Rosellae";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans        &trans
-                &kp R   &kp UP  &kp SPACE       &kp SPACE       &kp UP     &kp R
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp R   &kp UP  &kp SPACE  &kp SPACE  &kp UP  &kp R
             >;
         };
 
@@ -648,7 +612,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -658,7 +622,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &bt BT_CLR      &bt BT_CLR_ALL  &bt BT_NXT      &trans  &trans  &trans
+&bt BT_CLR  &bt BT_CLR_ALL  &bt BT_NXT  &trans  &trans  &trans
             >;
         };
     };
